@@ -9,10 +9,12 @@ services:
       KEYCLOAK_ADMIN_PASSWORD: admin
       KC_HEALTH_ENABLED: "true"
       KC_LOG_LEVEL: info
-    command: ["start-dev", "--http-port", "7080", "--https-port", "7443"]
+    command: ["start-dev", "--http-port", "7080", "--https-port", "7443", "--import-realm"]
     ports:
       - "7080:7080"
       - "7443:7443"
+    volumes:
+      - ./keycloak-config:/opt/keycloak/data/import
     networks:
       - keycloak_network
 
