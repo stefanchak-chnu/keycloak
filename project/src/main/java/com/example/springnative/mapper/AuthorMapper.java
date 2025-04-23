@@ -21,6 +21,11 @@ public class AuthorMapper {
         authorResponse.setName(author.getName());
         authorResponse.setDateOfBirth(author.getDateOfBirth().toString());
 
+        authorResponse.setCreatedBy(author.getCreatedBy());
+        authorResponse.setCreatedDate(author.getCreatedDate());
+        authorResponse.setLastModifiedBy(author.getLastModifiedBy());
+        authorResponse.setLastModifiedDate(author.getLastModifiedDate());
+
         return authorResponse;
     }
 }

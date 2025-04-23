@@ -29,6 +29,11 @@ public class BookMapper {
         AuthorResponse authorResponse = authorMapper.toResponse(book.getAuthor());
         bookResponse.setAuthorResponse(authorResponse);
 
+        bookResponse.setCreatedBy(book.getCreatedBy());
+        bookResponse.setCreatedDate(book.getCreatedDate());
+        bookResponse.setLastModifiedBy(book.getLastModifiedBy());
+        bookResponse.setLastModifiedDate(book.getLastModifiedDate());
+
         return bookResponse;
     }
 }
